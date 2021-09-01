@@ -538,6 +538,7 @@ def Build_Motif_Tree(motif):
     nodelist=list(nx.nodes(motif))
     for i in nodelist:
         mark[i]=0
+        motif_tree[i]=[]
     mark[nodelist[0]]=1
     build_tree(motif,mark,nodelist[0],motif_tree)
     return motif_tree
